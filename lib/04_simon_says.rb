@@ -1,17 +1,15 @@
 def echo (a)
-	return a
+  return a
 end
 
 def shout (a)
-	return a.upcase
+  return a.upcase
 end
 
-def repeat (a)
-
-end
-
-def repeat (a, b)
-
+def repeat (a, *p)
+  a = a + " "
+  a = a * (p - 1) + a
+  return a
 end
 
 def start_of_word(s, a)
