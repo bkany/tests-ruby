@@ -1,4 +1,19 @@
 def who_is_bigger(a, b, c)
+  if a != nil and b != nil and c != nil
+    array = Array.new(3)
+    array = [a, b, c]
+    if array.max == a
+      return "a is bigger"
+    end
+    if array.max == b
+      return "b is bigger"
+    end
+    if array.max == c
+      return "c is bigger"
+    end
+  else
+    return "nil detected"
+  end
 end
 
 def reverse_upcase_noLTA(a)
@@ -17,5 +32,6 @@ def array_42(a)
 end
 
 def magic_array(a)
-  return [2, 4, 8, 10]
+  a = a.flatten.sort.map{ |x| x * 2 }.delete_if{ |x| x % 3 == 0 }.uniq.sort
+  return a
 end
