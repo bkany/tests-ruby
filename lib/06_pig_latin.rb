@@ -21,7 +21,6 @@ def vowel(a)
 end
 
 def translate(a)
-  b = vowel(a)
-  a = a.split.map{ |x| add_ay(permutation(x, b)) }.join(" ")
+  a = a.split.map{ |x| add_ay(permutation(x, vowel(x))) }.join(" ")
   return a
 end
